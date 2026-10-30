@@ -2,10 +2,10 @@ name: SAST (Semgrep)
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main, develop, master]
   pull_request:
-    branches: [main, develop]
-
+    branches: [main, develop, master]
+  workflow_dispatch:
 jobs:
   semgrep:
     name: Static Application Security Testing
