@@ -48,3 +48,11 @@ jobs:
         with:
           name: semgrep-report
           path: semgrep-results.sarif
+  deploy:
+    name: Simulated Deployment
+    needs: semgrep
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy application
+        run: echo "Deployment allowed - SAST passed"  
